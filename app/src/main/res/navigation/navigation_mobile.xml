@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tennis01_navigation"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.project.ui.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_MainFragment_to_ListIncidentsFragment"
+            app:destination="@id/ListIncidentsFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_QuestionFragment"
+            app:destination="@id/QuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/QuestionFragment"
+        android:name="com.example.project.ui.fragment.QuestionFragment"
+        android:label="QuestionFragment"
+        tools:layout="@layout/fragment_question">
+
+    </fragment>
+    <fragment
+        android:id="@+id/ListIncidentsFragment"
+        android:name="com.example.project.ui.fragment.ListIncidentsFragment"
+        android:label="ListIncidentsFragment"
+        tools:layout="@layout/fragment_list_incidents">
+        <action
+            android:id="@+id/action_ListIncidentsFragment_to_DetailFragmentFragment"
+            app:destination="@id/DetailFragmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailFragmentFragment"
+        android:name="com.example.project.ui.fragment.DetailFragmentFragment"
+        android:label="DetailFragmentFragment"
+        tools:layout="@layout/fragment_detail_fragment" >
+        <argument
+            android:name="id"
+            app:argType="integer"/>
+    </fragment>
+
+</navigation>
